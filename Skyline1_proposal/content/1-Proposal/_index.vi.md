@@ -32,7 +32,7 @@ Amazon CloudWatch và tự động hóa bằng Amazon EventBridge.
 
 ![Cloud Racket Platform Architecture] ( "/images/Proposal/Skyline1_CloudRacket.jpg")
 
-*Dịch vụ AWS sử dụng*  
+### Dịch vụ AWS sử dụng
 - **AWS Amplify Hosting**: Lưu trữ và triển khai ứng dụng web/mobile. 	
 - **Amazon API Gateway**: Giao tiếp giữa client và backend.
 - **AWS Lambda**: Xử lý logic nghiệp vụ và kết nối các dịch vụ AWS.
