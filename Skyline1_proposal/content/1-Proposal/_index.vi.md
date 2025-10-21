@@ -30,7 +30,8 @@ Amazon Personalize gợi ý sân dựa trên lịch sử người dùng và Amaz
 
 Amazon CloudWatch và tự động hóa bằng Amazon EventBridge.
 
-![Cloud Racket Platform Architecture]({{ "images/Proposal/Skyline1_CloudRacket.jpg"}})
+![Cloud Racket Platform Architecture] ( "/images/Proposal/Skyline1_CloudRacket.jpg")
+
 *Dịch vụ AWS sử dụng*  
 - **AWS Amplify Hosting**: Lưu trữ và triển khai ứng dụng web/mobile. 	
 - **Amazon API Gateway**: Giao tiếp giữa client và backend.
