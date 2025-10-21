@@ -1,0 +1,40 @@
+baseURL = 'https://june4m.github.io/SKYLINE1_Proposal/'
+languageCode = 'en-us'
+
+defaultContentLanguage = 'en'
+# Keep English at root without /en/; Vietnamese will be under /vi/
+defaultContentLanguageInSubdir = false
+
+title = 'Skyline1 Cloud Racket Platform'
+
+themesDir = '../themes'
+theme = 'hugo-theme-learn'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+  [languages.vi]
+    languageName = 'Tiếng Việt'
+    languageCode = 'vi'
+    weight = 2
+
+[params]
+  author = 'SKYLINE TEAM'
+  description = 'Cloud Racket Platform Proposal'
+  # Add custom CSS after theme styles
+  custom_css = ['css/custom-fonts.css']
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableSearch = false
+
+[menu]
+  [[menu.main]]
+    identifier = 'proposal'
+    name = 'Proposal'
+    url = '/1-proposal/'
+    weight = 10
