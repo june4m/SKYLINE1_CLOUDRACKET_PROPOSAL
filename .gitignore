@@ -1,0 +1,4 @@
+# Hugo build output (CI will build and deploy)
+Skyline1_proposal/public/
+Skyline1_proposal/resources/_gen/
+Skyline1_proposal/.hugo_build.lock
