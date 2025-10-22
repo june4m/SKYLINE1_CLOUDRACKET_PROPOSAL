@@ -31,9 +31,9 @@ The web interface is hosted on AWS Amplify with Amazon Cognito handling user aut
 The platform adopts an AWS Serverless architecture for stable operations, scalability, and cost efficiency.
 User, court, and booking data are stored in Amazon DynamoDB. Components communicate via Amazon API Gateway and AWS Lambda functions. The web and mobile interfaces are deployed on AWS Amplify, while Amazon Cognito ensures secure access control.
 Amazon Personalize recommends courts based on user history, and Amazon Comprehend performs sentiment analysis on reviews. A Custom Dashboard visualizes operational data for both users and court owners.
-All activities are monitored through Amazon CloudWatch and automated with Amazon EventBridge.
+All activities are monitored through Amazon CloudWatch and automated with Amazon EventBridge. 
 
-![Cloud Racket Platform Architecture](/images/Proposal/Skyline1_CloudRacket.jpg)
+![Cloud Racket Platform Architecture](/SKYLINE1_CLOUDRACKET_PROPOSAL/images/Proposal/Skyline1_CloudRacket.jpg)
 
 ### AWS Services Used
 - **AWS Amplify Hosting**: Web/mobile hosting and deployment.
