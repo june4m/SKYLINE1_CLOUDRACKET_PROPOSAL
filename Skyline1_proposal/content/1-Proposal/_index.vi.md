@@ -12,10 +12,10 @@ pre: " <b> 2. </b> "
 Badminton Court Finder Platform được thiết kế nhằm hỗ trợ người chơi cầu lông tại TP. Hồ Chí Minh dễ dàng tìm kiếm, đặt sân, và quản lý lịch chơi theo thời gian thực. Ứng dụng được xây dựng hoàn toàn trên kiến trúc AWS Serverless, tích hợp các công nghệ như AI gợi ý cá nhân hóa, phân tích cảm xúc từ đánh giá người dùng, và bản đồ vị trí sân gần nhất thông qua Google API đồng thời hỗ trợ thống kê doanh số hàng tháng cho chủ sân.  
 
 ### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*
+*Vấn đề hiện tại*  
 Việc tìm và đặt sân cầu lông hiện nay chủ yếu dựa vào liên hệ thủ công (số điện thoại hoặc mạng xã hội) , lịch đặt sân không được cập nhật theo thời gian thực và thiếu độ phủ sóng của các sân làm gây trở ngại về ước tính quãng đường đến sân. Đồng thời, chủ sân gặp khó khăn trong việc quản lý, sắp xếp số lượng sân cũng như thống kê doanh thu không hiệu quả.
 
-*Giải pháp*
+*Giải pháp*  
 Trang web này mang lại quy trình tự động hóa cho việc tìm kiếm, đặt sân và quản lý hiệu quả cho chủ doanh nghiệp. Người dùng có thể tìm kiếm sân gần vị trí của mình thông qua Amazon Location Service , xem tình trạng sân theo thời gian thực trong Amazon DynamoDB  và được gợi ý sân phù hợp qua Amazon Personalize. Chủ sân có thể đăng ký và cập nhật thông tin sân, nhận email xác nhận đặt sân qua Amazon SES và thống kê doanh thu qua thông qua bảng điều khiển tùy chỉnh (Custom Dashboard) được xây dựng bằng AWS Amplify, Lambda, và biểu đồ Chart.js từ dữ liệu trong DynamoDB/S3.Giao diện web được triển khai bằng AWS Amplify và quản lý người dùng qua Amazon Cognito.
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
@@ -30,15 +30,14 @@ Amazon Personalize gợi ý sân dựa trên lịch sử người dùng và Amaz
 
 Amazon CloudWatch và tự động hóa bằng Amazon EventBridge.
 
-{{< figure src="images/Proposal/Skyline1_CloudRacket.jpg" alt="Cloud Racket Platform Architecture" >}}
-
-### Dịch vụ AWS sử dụng
-- **AWS Amplify Hosting**: Lưu trữ và triển khai ứng dụng web/mobile.
+![Cloud Racket Platform Architecture](/images/Proposal/Skyline1_CloudRacket.jpg)
+*Dịch vụ AWS sử dụng*  
+- **AWS Amplify Hosting**: Lưu trữ và triển khai ứng dụng web/mobile. 	
 - **Amazon API Gateway**: Giao tiếp giữa client và backend.
 - **AWS Lambda**: Xử lý logic nghiệp vụ và kết nối các dịch vụ AWS.
 - **Amazon DynamoDB**: Lưu trữ thông tin người dùng, sân và lịch đặt.
-- **Amazon Cognito**: Xác thực và phân quyền người người dùng..
-- **Amazon SES** Gửi email xác nhận và thông báo tự động.
+- **Amazon Cognito**: Xác thực và phân quyền người dùng..
+- **Amazon SES**: Gửi email xác nhận và thông báo tự động.
 - **Amazon S3**: Lưu trữ hình ảnh sân và dữ liệu phân tích.
 - **Amazon Personalize**: Đưa ra gợi ý sân phù hợp cho người dùng.
 - **Amazon Comprehend (Optional)**:  phân tích cảm xúc trong bình luận tiếng Việt để bổ sung điểm đánh giá tổng hợp.
@@ -58,7 +57,7 @@ Amazon CloudWatch và tự động hóa bằng Amazon EventBridge.
 - **Admin Dashboard**: Bảng điều khiển tùy chỉnh hiển thị doanh thu, lượt đặt và đánh giá, được xây dựng bằng AWS Amplify và Chart.js, với dữ liệu tổng hợp từ DynamoDB hoặc S3 thông qua AWS Lambda.
 - **Automation Layer**: EventBridge kích hoạt Lambda định kỳ để gửi nhắc lịch, huấn luyện lại Personalize và dọn dữ liệu cũ.
 ### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*
+*Các giai đoạn triển khai*  
 Dự án được chia thành 4 giai đoạn chính:
 - Nghiên cứu và thiết kế kiến trúc: Lên sơ đồ hệ thống AWS Serverless, xác định quy trình đặt sân và luồng dữ liệu (Tuần 1).
 - Phát triển và kiểm thử: Xây dựng API Gateway + Lambda, tích hợp DynamoDB và Cognito, kiểm thử chức năng (Tuần 2-3).
@@ -66,7 +65,7 @@ Dự án được chia thành 4 giai đoạn chính:
 - Triển khai và tối ưu: Sử dụng Amplify CI/CD để triển khai tự động, thiết lập CloudWatch và EventBridge để giám sát (Tuần 5).
 
 *Yêu cầu kỹ thuật*  
-- Frontend: ReactJS / Next.js (AWS Amplify Hosting)
+- Frontend: ReactJS / Next.js (AWS Amplify Hosting) 
 - Backend: AWS Lambda (Node.js hoặc Python) + Amazon API Gateway
 - Database: Amazon DynamoDB (lưu người dùng, sân, lịch đặt, rating; hỗ trợ truy vấn Geo qua DynamoDB Geo Library hoặc AWS Location Service)
 - AI Integration: Amazon Personalize (phân tích hành vi và đánh giá để gợi ý sân phù hợp)
@@ -75,7 +74,7 @@ Dự án được chia thành 4 giai đoạn chính:
 - Analytics: Custom Dashboard (trực quan hóa doanh thu, lượt đặt và đánh giá từ dữ liệu DynamoDB hoặc S3, hiển thị qua AWS Amplify + Lambda + Chart.js).
 - Automation: Amazon EventBridge (Scheduler) tự động hóa nhắc lịch, cập nhật dữ liệu gợi ý và dọn dẹp dữ liệu cũ
 - Maps API: AWS Location Service hoặc Google Maps / Places / Distance Matrix (tìm sân gần, hiển thị bản đồ và chỉ đường)
-### 5. Lộ trình & Mốc triển khai
+### 5. Lộ trình & Mốc triển khai  
 - *Thời lượng dự án*: 3 tháng (giai đoạn thực tập).  
 Tháng 1 – Nghiên cứu & Chuẩn bị
 
@@ -91,7 +90,7 @@ Tháng 3 – Triển khai & Triển khai thực tế
 - Tuần 3: Tích hợp Amazon Personalize, SES, và Location Service.
 - Tuần 4: Kiểm thử, tối ưu hiệu năng và triển khai hoàn chỉnh trên AWS Amplify.
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)
+Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
 Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
 
 *Chi phí hạ tầng*  
@@ -110,22 +109,24 @@ Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.p
 
 + Tổng cộng: $0.7/tháng, $8.40/12 tháng
 - Tháng 1: $0.12/tháng (tất cả trong Free Tier)
-- Tháng 2: $5.12/tháng (Personalize vẫn trong Free Tier, Amplify bắt đầu t1mg 1mg 1mg$1mg, m/năm
+- Tháng 2: $5.12/tháng (Personalize vẫn trong Free Tier, Amplify bắt đầu tính phí)
+- Sau khi hết Free Tier: $13.12/tháng, ≈ $157.44/năm
 
-### 7. Đánh giá rủi ro
+### 7. Đánh giá rủi ro  
 *Ma trận rủi ro*  
 - Mất kết nối Internet: Tác động trung bình, xác suất trung bình  
 - Truy cập trái phép: Tác động cao, xác suất thấp  
-- Vượt ngân sách: Tác động thấp, xác suất thấp
+- Vượt ngân sách: Tác động thấp, xác suất thấp  
 - Lỗi gợi ý AI: Tác động trung bình, xác suất thấp  
 
 *Chiến lược giảm thiểu*  
 - Mạng: Tự động thử lại khi mất kết nối
 - Bảo mật: Áp dụng MFA qua Cognito, WAF ngăn chặn tấn công
 - Chi phí: Cảnh báo qua AWS Budgets, tối ưu tần suất truy vấn
-- AI: Theo dõi và cập nhậtpetosonapeto
+- AI: Theo dõi và cập nhật mô hình Personalize định kỳ
 
-peto phòpeto phépetạm thờe và đồn có mạng
+*Kế hoạch dự phòng*  
+- Cho phép đặt sân tạm thời offline và đồng bộ khi có mạng  
 - Rollback CodePipeline nếu có lỗi triển khai hoặc vượt chi phí  
 
 ### 8. Kết quả kỳ vọng  
