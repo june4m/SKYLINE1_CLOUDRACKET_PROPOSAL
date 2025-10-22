@@ -33,7 +33,7 @@ User, court, and booking data are stored in Amazon DynamoDB. Components communic
 Amazon Personalize recommends courts based on user history, and Amazon Comprehend performs sentiment analysis on reviews. A Custom Dashboard visualizes operational data for both users and court owners.
 All activities are monitored through Amazon CloudWatch and automated with Amazon EventBridge.
 
-![Cloud Racket Platform Architecture](SKYLINE1_CLOUDRACKET_PROPOSAL/static/images/Proposal/Skyline1_CloudRacket.jpg)
+![Cloud Racket Platform Architecture](/images/Proposal/Skyline1_CloudRacket.jpg)
 
 ### AWS Services Used
 - **AWS Amplify Hosting**: Web/mobile hosting and deployment.
