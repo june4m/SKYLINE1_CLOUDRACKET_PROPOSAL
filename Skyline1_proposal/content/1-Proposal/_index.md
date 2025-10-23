@@ -95,7 +95,7 @@ The project consists of 4 main phases:
 
 - AI Integration: Amazon Personalize (behavioral and rating-based court recommendations)
 
-- Auth & Security: Amazon Cognito, AWS IAM, AWS KMS (encryption), AWS WAF (web protection)
+- Auth & Security: Amazon Cognito, AWS IAM, AWS WAF (web protection)
 
 - Email: Amazon SES (booking confirmation, notifications, reminders)
 

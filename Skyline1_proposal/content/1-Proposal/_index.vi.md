@@ -70,7 +70,7 @@ Dự án được chia thành 4 giai đoạn chính:
 - Backend: AWS Lambda (Node.js hoặc Python) + Amazon API Gateway
 - Database: Amazon DynamoDB (lưu người dùng, sân, lịch đặt, rating; hỗ trợ truy vấn Geo qua DynamoDB Geo Library hoặc AWS Location Service)
 - AI Integration: Amazon Personalize (phân tích hành vi và đánh giá để gợi ý sân phù hợp)
-- Auth & Security: Amazon Cognito (đăng nhập/xác thực), AWS IAM (phân quyền), AWS KMS (mã hóa dữ liệu), AWS WAF (chống tấn công web)
+- Auth & Security: Amazon Cognito (đăng nhập/xác thực), AWS IAM (phân quyền), AWS WAF (chống tấn công web)
 - Email: Amazon SES (gửi xác nhận đặt sân, thông báo, nhắc lịch tự động)
 - Analytics: Custom Dashboard (trực quan hóa doanh thu, lượt đặt và đánh giá từ dữ liệu DynamoDB hoặc S3, hiển thị qua AWS Amplify + Lambda + Chart.js).
 - Automation: Amazon EventBridge (Scheduler) tự động hóa nhắc lịch, cập nhật dữ liệu gợi ý và dọn dẹp dữ liệu cũ
