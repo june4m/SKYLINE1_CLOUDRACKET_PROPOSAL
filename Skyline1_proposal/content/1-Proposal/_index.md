@@ -66,7 +66,7 @@ All activities are monitored through Amazon CloudWatch and automated with Amazon
 
 - **Amazon EventBridge (Scheduler)**: Automates notifications and data cleanup.
 
-- **AWS IAM + KMS + WAF**: Security management, data encryption, and web attack prevention.
+- **AWS IAM  + WAF**: Security management, data encryption, and web attack prevention.
 
 ### Component Design
 - **User Module**: Amazon Cognito manages registration, login, and profiles; user data (bookings, favorites, history) stored in DynamoDB.
@@ -147,7 +147,7 @@ Or you can download the [Budget Estimation File](../attachments/budget_estimatio
     - Custom Dashboard (Amplify + Chart.js): $0.00/month (uses existing Amplify, data from S3/DynamoDB)
     - Amazon Location Service: $0.00/month (10,000 map requests, 1,000 location requests)
     - Amazon EventBridge (Scheduler): $0.00/month (10 trigger rules daily/hourly)
-    - AWS IAM + KMS + WAF: $0.00/month (authentication, encryption, and basic security)
+    - AWS IAM + WAF: $0.00/month (authentication, encryption, and basic security)
 
 + Total: $0.7/month, $8.40/12 months
     - Month 1: $0.12/month (All within Free Tier)

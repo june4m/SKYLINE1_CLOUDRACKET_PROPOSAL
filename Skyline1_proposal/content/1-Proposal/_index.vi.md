@@ -48,7 +48,7 @@ Amazon CloudWatch và tự động hóa bằng Amazon EventBridge.
 - **Amplify CI/CD**: Tự động triển khai và cập nhật hệ thống.
 - **Amazon CloudWatch**: Theo dõi log, hiệu suất và cảnh báo.
 - **Amazon EventBridge (Scheduler)**: Tự động hóa lịch gửi thông báo và dọn dẹp dữ liệu.
-- **AWS IAM + KMS + WAF**:  Quản lý bảo mật, mã hóa dữ liệu và ngăn chặn tấn công web.
+- **AWS IAM + WAF**:  Quản lý bảo mật, mã hóa dữ liệu và ngăn chặn tấn công web.
 *Thiết kế thành phần*  
 - **User Module**: Amazon Cognito quản lý đăng ký, đăng nhập và hồ sơ người dùng; dữ liệu người chơi, lịch sử đặt sân và sân yêu thích lưu trong DynamoDB.
 - **Court Module**: Chủ sân thêm, chỉnh sửa thông tin và ảnh sân; dữ liệu sân lưu trong DynamoDB, hình ảnh trên S3; cập nhật trạng thái sân qua API Gateway + Lambda.
@@ -106,7 +106,7 @@ Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.p
 - Dashboard tùy chỉnh (Amplify + Chart.js): $0.00/tháng (sử dụng Amplify hiện có, dữ liệu từ S3/DynamoDB)
 - Amazon Location Service: $0.00/tháng (10,000 map requests, 1,000 location requests)
 - Amazon EventBridge (Scheduler): $0.00/tháng (10 quy tắc kích hoạt mỗi ngày/giờ)
-- AWS IAM + KMS + WAF: $0.00/tháng (xác thực, mã hóa và bảo mật cơ bản)
+- AWS IAM + WAF: $0.00/tháng (xác thực, mã hóa và bảo mật cơ bản)
 
 + Tổng cộng: $0.7/tháng, $8.40/12 tháng
 - Tháng 1: $0.12/tháng (tất cả trong Free Tier)
